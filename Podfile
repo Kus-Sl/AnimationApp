@@ -7,4 +7,5 @@ target 'AnimationApp' do
 
   # Pods for AnimationApp
 	pod 'Spring', :git => 'https://github.com/LexDeBash/Spring.git'
+	pod 'SwiftLint'
 end

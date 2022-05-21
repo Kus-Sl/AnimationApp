@@ -1,8 +1,14 @@
 PODS:
   - Spring (1.0.9)
+  - SwiftLint (0.46.2)
 
 DEPENDENCIES:
   - Spring (from `https://github.com/LexDeBash/Spring.git`)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - SwiftLint
 
 EXTERNAL SOURCES:
   Spring:
@@ -15,7 +21,8 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   Spring: 3e8b7d144afa52f26cf1ddba349812388de6ceb7
+  SwiftLint: 6bc52a21f0fd44cab9aa2dc8e534fb9f5e3ec507
 
-PODFILE CHECKSUM: a87a649b5087be477c4130eee268328a9398a15c
+PODFILE CHECKSUM: 2ea08d6ecea8859ebe70f5e9a64c12624d47cad5
 
 COCOAPODS: 1.11.3
