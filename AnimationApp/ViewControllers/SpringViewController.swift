@@ -19,10 +19,47 @@ class SpringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        setAnimation(by: Animation.getAnimation(), for: animationLabel)
+        showRandomAnimationParameters(for: animationLabel)
     }
 
-    @IBAction func animationButtonTouchUp(_ sender: UIButton) {
 
+/* Здесь обнаружил, что в методе animate() есть код, который через какое-то сбегающее замыкание ресетит все параметры анимации. Побороть это замыкание у меня не получилось, поэтому сделал такую ловушку через if для самого первого нажатия кнопки.
+ */
+    @IBAction func animationButtonTouchUp(_ sender: UIButton) {
+        if animationLabel.animation != "" {
+            animationLabel.animate()
+            setTitleForAnimationButton(sender)
+        }
+
+        setAnimation(by: Animation.getAnimation(), for: animationLabel)
+        animationLabel.animation = sender.currentTitle ?? ""
+        showRandomAnimationParameters(for: animationLabel)
+        animationLabel.animate()
+
+        setTitleForAnimationButton(sender)
+    }
+
+    private func setAnimation(by animation: Animation, for element: Springable) {
+        element.animation = animation.animation
+        element.curve = animation.curve
+        element.force = animation.force
+        element.delay = animation.delay
+        element.duration = animation.duration
+    }
+
+    private func showRandomAnimationParameters(for label: SpringLabel) {
+        label.text = """
+         Animation = \(label.animation)
+         Curve = \(label.curve)
+         Force = \(label.force)
+         Delay = \(label.delay)
+         Duration = \(label.duration)
+        """
+    }
+
+    private func setTitleForAnimationButton(_ sender: UIButton) {
+        sender.setTitle(Animation.getAnimation().animation, for: .normal)
     }
 }
+

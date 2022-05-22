@@ -16,7 +16,7 @@ struct Animation {
     let duration: CGFloat
 
 
-    static func getRandomAnimation() -> Animation {
+    static func getAnimation() -> Animation {
         let randomAnimation = Spring.AnimationPreset.allCases
             .randomElement()?.rawValue
 
