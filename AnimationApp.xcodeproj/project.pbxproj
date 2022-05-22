@@ -10,10 +10,11 @@
 		1890917F08FDC67E98FB76D0 /* Pods_AnimationApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D930D71764E43294778E9454 /* Pods_AnimationApp.framework */; };
 		A805DB5C2839585800163F5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805DB5B2839585800163F5C /* AppDelegate.swift */; };
 		A805DB5E2839585800163F5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805DB5D2839585800163F5C /* SceneDelegate.swift */; };
-		A805DB602839585800163F5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A805DB5F2839585800163F5C /* ViewController.swift */; };
-		A805DB632839585800163F5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A805DB612839585800163F5C /* Main.storyboard */; };
 		A805DB652839585900163F5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A805DB642839585900163F5C /* Assets.xcassets */; };
 		A805DB682839585900163F5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A805DB662839585900163F5C /* LaunchScreen.storyboard */; };
+		A8174315283A80240080F6D9 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8174314283A80240080F6D9 /* AnimationModel.swift */; };
+		A8AE628D283A981E009C40D8 /* Scene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AE628C283A981E009C40D8 /* Scene.storyboard */; };
+		A8AE628F283A9863009C40D8 /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE628E283A9863009C40D8 /* SpringViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +23,12 @@
 		A805DB582839585800163F5C /* AnimationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A805DB5B2839585800163F5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A805DB5D2839585800163F5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A805DB5F2839585800163F5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A805DB622839585800163F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A805DB642839585900163F5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A805DB672839585900163F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A805DB692839585900163F5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8174314283A80240080F6D9 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
+		A8AE628C283A981E009C40D8 /* Scene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scene.storyboard; sourceTree = "<group>"; };
+		A8AE628E283A9863009C40D8 /* SpringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
 		D930D71764E43294778E9454 /* Pods_AnimationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,7 +66,8 @@
 			isa = PBXGroup;
 			children = (
 				A805DB7028395E0600163F5C /* ViewControllers */,
-				A805DB7128395E1D00163F5C /* Storyboards */,
+				A8174313283A7FFF0080F6D9 /* Models */,
+				A805DB7128395E1D00163F5C /* StoryBoards */,
 				A805DB6F28395DF500163F5C /* App */,
 				A805DB7228395E4300163F5C /* Resources */,
 			);
@@ -84,18 +87,18 @@
 		A805DB7028395E0600163F5C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				A805DB5F2839585800163F5C /* ViewController.swift */,
+				A8AE628E283A9863009C40D8 /* SpringViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		A805DB7128395E1D00163F5C /* Storyboards */ = {
+		A805DB7128395E1D00163F5C /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
-				A805DB612839585800163F5C /* Main.storyboard */,
+				A8AE628C283A981E009C40D8 /* Scene.storyboard */,
 				A805DB662839585900163F5C /* LaunchScreen.storyboard */,
 			);
-			path = Storyboards;
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 		A805DB7228395E4300163F5C /* Resources */ = {
@@ -104,6 +107,14 @@
 				A805DB642839585900163F5C /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		A8174313283A7FFF0080F6D9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A8174314283A80240080F6D9 /* AnimationModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B0A5B0392C19B22A4937DF7A /* Frameworks */ = {
@@ -120,7 +131,6 @@
 				085F4B1E5CA93666A5EECDD3 /* Pods-AnimationApp.debug.xcconfig */,
 				5E2FF1F1864228936271D956 /* Pods-AnimationApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -185,8 +195,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A805DB682839585900163F5C /* LaunchScreen.storyboard in Resources */,
+				A8AE628D283A981E009C40D8 /* Scene.storyboard in Resources */,
 				A805DB652839585900163F5C /* Assets.xcassets in Resources */,
-				A805DB632839585800163F5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,23 +249,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A805DB602839585800163F5C /* ViewController.swift in Sources */,
+				A8174315283A80240080F6D9 /* AnimationModel.swift in Sources */,
 				A805DB5C2839585800163F5C /* AppDelegate.swift in Sources */,
 				A805DB5E2839585800163F5C /* SceneDelegate.swift in Sources */,
+				A8AE628F283A9863009C40D8 /* SpringViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A805DB612839585800163F5C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A805DB622839585800163F5C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A805DB662839585900163F5C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -394,7 +397,7 @@
 				INFOPLIST_FILE = AnimationApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Scene;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -425,7 +428,7 @@
 				INFOPLIST_FILE = AnimationApp/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Scene;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
