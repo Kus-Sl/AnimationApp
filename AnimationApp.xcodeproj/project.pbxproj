@@ -13,8 +13,8 @@
 		A805DB652839585900163F5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A805DB642839585900163F5C /* Assets.xcassets */; };
 		A805DB682839585900163F5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A805DB662839585900163F5C /* LaunchScreen.storyboard */; };
 		A8174315283A80240080F6D9 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8174314283A80240080F6D9 /* AnimationModel.swift */; };
-		A8AE628D283A981E009C40D8 /* Scene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AE628C283A981E009C40D8 /* Scene.storyboard */; };
 		A8AE628F283A9863009C40D8 /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE628E283A9863009C40D8 /* SpringViewController.swift */; };
+		A8AE6290283A9ACD009C40D8 /* Scene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AE628C283A981E009C40D8 /* Scene.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,7 +195,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A805DB682839585900163F5C /* LaunchScreen.storyboard in Resources */,
-				A8AE628D283A981E009C40D8 /* Scene.storyboard in Resources */,
+				A8AE6290283A9ACD009C40D8 /* Scene.storyboard in Resources */,
 				A805DB652839585900163F5C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

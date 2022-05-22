@@ -15,9 +15,48 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Mb-SQ-hTA" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="50" y="94" width="314" height="200"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="nkV-Xg-5oL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdH-4z-53m">
+                                <rect key="frame" x="50" y="781" width="314" height="31"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Run">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="animationButtonTouchUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YTB-A7-en9"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="5Mb-SQ-hTA" secondAttribute="trailing" constant="50" id="1An-ON-gvX"/>
+                            <constraint firstItem="5Mb-SQ-hTA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="OJ1-HJ-7Ls"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="pdH-4z-53m" secondAttribute="bottom" constant="50" id="QCC-yw-fMx"/>
+                            <constraint firstItem="pdH-4z-53m" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="grK-c6-dSr"/>
+                            <constraint firstItem="pdH-4z-53m" firstAttribute="width" secondItem="5Mb-SQ-hTA" secondAttribute="width" id="oka-fF-T15"/>
+                            <constraint firstItem="5Mb-SQ-hTA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="sDt-Wj-vov"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="animationLabel" destination="5Mb-SQ-hTA" id="l0V-eG-yHJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,8 +64,14 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
