@@ -24,7 +24,8 @@ class SpringViewController: UIViewController {
     }
 
 
-/* Здесь обнаружил, что в методе animate() есть код, который через какое-то сбегающее замыкание ресетит все параметры анимации. Побороть это замыкание у меня не получилось, поэтому сделал такую ловушку через if для самого первого нажатия кнопки.
+/* Здесь обнаружил, что в методе animate() есть код, который через какое-то сбегающее замыкание ресетит все параметры анимации.
+ Побороть это замыкание у меня не получилось, поэтому сделал такую ловушку через if для самого первого нажатия кнопки.
  */
     @IBAction func animationButtonTouchUp(_ sender: UIButton) {
         if animationLabel.animation != "" {
@@ -33,7 +34,7 @@ class SpringViewController: UIViewController {
         }
 
         setAnimation(by: Animation.getAnimation(), for: animationLabel)
-        animationLabel.animation = sender.currentTitle ?? ""
+        animationLabel.animation = sender.currentTitle ?? "Run"
         showRandomAnimationParameters(for: animationLabel)
         animationLabel.animate()
 
