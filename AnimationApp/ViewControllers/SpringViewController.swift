@@ -52,9 +52,9 @@ class SpringViewController: UIViewController {
         label.text = """
          Animation = \(label.animation)
          Curve = \(label.curve)
-         Force = \(label.force)
-         Delay = \(label.delay)
-         Duration = \(label.duration)
+         Force = \(String(format: "%.2f", label.force))
+         Delay = \(String(format: "%.2f", label.delay))
+         Duration = \(String(format: "%.2f", label.duration))
         """
     }
 
