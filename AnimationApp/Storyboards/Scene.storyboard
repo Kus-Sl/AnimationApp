@@ -40,7 +40,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="animationButtonTouchUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="YTB-A7-en9"/>
+                                    <action selector="animationButtonTouchUp:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="cHv-aZ-A6r"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,13 +59,14 @@
                         <imageReference key="image" image="s.circle" catalog="system" symbolScale="default"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="y19-gk-ia3"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="animationLabel" destination="5Mb-SQ-hTA" id="l0V-eG-yHJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1384" y="384"/>
+            <point key="canvasLocation" x="1361" y="-325"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Bts-3W-He5">
@@ -73,6 +74,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PSZ-AZ-FS3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xmo-3e-wiO">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -88,19 +90,58 @@
         <!--CoreAnimation-->
         <scene sceneID="pkJ-eh-WiY">
             <objects>
-                <viewController id="5FI-rV-Ywk" sceneMemberID="viewController">
+                <viewController id="5FI-rV-Ywk" customClass="CoreAnimationViewController" customModule="AnimationApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ieh-wM-rwz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tmi-B1-oqe">
+                                <rect key="frame" x="50" y="94" width="314" height="200"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="CCf-ev-WCh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rW-Nx-ju1">
+                                <rect key="frame" x="50" y="732" width="314" height="31"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Run">
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="animationButtonTouchUp:" destination="5FI-rV-Ywk" eventType="touchUpInside" id="hIi-qj-Ohj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="dEP-qS-FQI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9rW-Nx-ju1" firstAttribute="centerX" secondItem="dEP-qS-FQI" secondAttribute="centerX" id="Sr0-7B-gRR"/>
+                            <constraint firstItem="dEP-qS-FQI" firstAttribute="bottom" secondItem="9rW-Nx-ju1" secondAttribute="bottom" constant="50" id="UQw-lK-9RK"/>
+                            <constraint firstItem="Tmi-B1-oqe" firstAttribute="leading" secondItem="dEP-qS-FQI" secondAttribute="leading" constant="50" id="VUd-tj-5DQ"/>
+                            <constraint firstItem="dEP-qS-FQI" firstAttribute="trailing" secondItem="Tmi-B1-oqe" secondAttribute="trailing" constant="50" id="k1d-aO-Mcl"/>
+                            <constraint firstItem="Tmi-B1-oqe" firstAttribute="top" secondItem="dEP-qS-FQI" secondAttribute="top" constant="50" id="lA2-v5-2b8"/>
+                            <constraint firstItem="9rW-Nx-ju1" firstAttribute="width" secondItem="Tmi-B1-oqe" secondAttribute="width" id="pFg-0v-bZl"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="CoreAnimation" image="c.circle" catalog="system" selectedImage="c.circle.fill" id="nXp-Jf-bwa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="animationLabel" destination="Tmi-B1-oqe" id="pP6-da-W0s"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xal-QH-7Gm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="-268"/>
+            <point key="canvasLocation" x="1361" y="441"/>
         </scene>
     </scenes>
     <resources>

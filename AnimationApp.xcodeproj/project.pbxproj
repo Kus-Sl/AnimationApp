@@ -90,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				A8AE628E283A9863009C40D8 /* SpringViewController.swift */,
+				A8C4C4A1283C27B90012D672 /* CoreAnimationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -115,7 +116,6 @@
 			isa = PBXGroup;
 			children = (
 				A8174314283A80240080F6D9 /* AnimationModel.swift */,
-				A8C4C4A1283C27B90012D672 /* CoreAnimationViewController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
