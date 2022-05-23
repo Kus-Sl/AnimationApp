@@ -27,7 +27,6 @@ struct Animation {
         let randomDelay = CGFloat.random(in: 0...0.5)
         let randomDuration = CGFloat.random(in: 0...1.5)
 
-
         return Animation(
             animation: randomAnimation ?? "pop",
             curve: randomCurve ?? "easeIn",

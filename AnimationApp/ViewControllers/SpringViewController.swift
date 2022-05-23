@@ -19,7 +19,7 @@ class SpringViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setAnimation(by: Animation.getAnimation(), for: animationLabel)
+        setAnimation(for: animationLabel, by: Animation.getAnimation())
         showRandomAnimationParameters(for: animationLabel)
     }
 
@@ -33,21 +33,28 @@ class SpringViewController: UIViewController {
             setTitleForAnimationButton(sender)
         }
 
-        setAnimation(by: Animation.getAnimation(), for: animationLabel)
-        animationLabel.animation = sender.currentTitle ?? "Run"
+        setAnimation(
+            for: animationLabel,
+            by: Animation.getAnimation(),
+            by: sender.currentTitle
+        )
+
         showRandomAnimationParameters(for: animationLabel)
         animationLabel.animate()
 
         setTitleForAnimationButton(sender)
     }
 
-    private func setAnimation(by animation: Animation, for element: Springable) {
-        element.animation = animation.animation
-        element.curve = animation.curve
-        element.force = animation.force
-        element.delay = animation.delay
-        element.duration = animation.duration
-    }
+    private func setAnimation(for element: Springable, by parameters: Animation, by name: String? = nil ) {
+        name != nil
+        ? (element.animation = name ?? "pop")
+        : (element.animation = parameters.animation)
+
+        element.curve = parameters.curve
+        element.force = parameters.force
+        element.delay = parameters.delay
+        element.duration = parameters.duration
+        }
 
     private func showRandomAnimationParameters(for label: SpringLabel) {
         label.text = """
@@ -63,4 +70,3 @@ class SpringViewController: UIViewController {
         sender.setTitle(Animation.getAnimation().animation, for: .normal)
     }
 }
-
