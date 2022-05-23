@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PSZ-AZ-FS3">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Spring View Controller-->
+        <!--Spring-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="SpringViewController" customModule="AnimationApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,7 +28,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdH-4z-53m">
-                                <rect key="frame" x="50" y="781" width="314" height="31"/>
+                                <rect key="frame" x="50" y="732" width="314" height="31"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Run">
@@ -54,16 +55,59 @@
                             <constraint firstItem="5Mb-SQ-hTA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="sDt-Wj-vov"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Spring" selectedImage="s.circle.fill" catalog="system" id="iHX-nL-aXm">
+                        <imageReference key="image" image="s.circle" catalog="system" symbolScale="default"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="y19-gk-ia3"/>
                     <connections>
                         <outlet property="animationLabel" destination="5Mb-SQ-hTA" id="l0V-eG-yHJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="82"/>
+            <point key="canvasLocation" x="1384" y="384"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Bts-3W-He5">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="PSZ-AZ-FS3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xmo-3e-wiO">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5FI-rV-Ywk" kind="relationship" relationship="viewControllers" id="0U9-tY-TNa"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="0zh-Mf-cf2"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UHP-ae-m9j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="426" y="48"/>
+        </scene>
+        <!--CoreAnimation-->
+        <scene sceneID="pkJ-eh-WiY">
+            <objects>
+                <viewController id="5FI-rV-Ywk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ieh-wM-rwz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dEP-qS-FQI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CoreAnimation" image="c.circle" catalog="system" selectedImage="c.circle.fill" id="nXp-Jf-bwa"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xal-QH-7Gm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1383" y="-268"/>
         </scene>
     </scenes>
     <resources>
+        <image name="c.circle" catalog="system" width="128" height="121"/>
+        <image name="c.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="s.circle" catalog="system" width="128" height="121"/>
+        <image name="s.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

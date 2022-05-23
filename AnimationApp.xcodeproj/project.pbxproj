@@ -15,6 +15,7 @@
 		A8174315283A80240080F6D9 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8174314283A80240080F6D9 /* AnimationModel.swift */; };
 		A8AE628F283A9863009C40D8 /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE628E283A9863009C40D8 /* SpringViewController.swift */; };
 		A8AE6290283A9ACD009C40D8 /* Scene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AE628C283A981E009C40D8 /* Scene.storyboard */; };
+		A8C4C4A2283C27B90012D672 /* CoreAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C4C4A1283C27B90012D672 /* CoreAnimationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A8174314283A80240080F6D9 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
 		A8AE628C283A981E009C40D8 /* Scene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scene.storyboard; sourceTree = "<group>"; };
 		A8AE628E283A9863009C40D8 /* SpringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
+		A8C4C4A1283C27B90012D672 /* CoreAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreAnimationViewController.swift; path = AnimationApp/ViewControllers/CoreAnimationViewController.swift; sourceTree = SOURCE_ROOT; };
 		D930D71764E43294778E9454 /* Pods_AnimationApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				A8174314283A80240080F6D9 /* AnimationModel.swift */,
+				A8C4C4A1283C27B90012D672 /* CoreAnimationViewController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				A8174315283A80240080F6D9 /* AnimationModel.swift in Sources */,
 				A805DB5C2839585800163F5C /* AppDelegate.swift in Sources */,
 				A805DB5E2839585800163F5C /* SceneDelegate.swift in Sources */,
+				A8C4C4A2283C27B90012D672 /* CoreAnimationViewController.swift in Sources */,
 				A8AE628F283A9863009C40D8 /* SpringViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
