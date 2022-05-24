@@ -9,18 +9,13 @@ import UIKit
 
 class CoreAnimationViewController: UIViewController {
 
-    @IBOutlet weak var animationLabel: UILabel! {
-        didSet {
-            animationLabel.layer.masksToBounds = true
-            animationLabel.layer.cornerRadius = 15
-        }
+    @IBOutlet weak var animationLabel: UIView! {
+        didSet { animationLabel.layer.cornerRadius = 15 }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
-
 
     @IBAction func animationButtonTouchUp(_ sender: UIButton) {
     }
