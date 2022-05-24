@@ -13,7 +13,7 @@ class CoreAnimationViewController: UIViewController {
         didSet { animationView.layer.cornerRadius = 15 }
     }
 
-    @IBAction func animationButtonTouchUp(_ sender: UIButton) {
+    @IBAction func animationButtonTouchUp() {
         animationView.getRandomCoreAnimation()
     }
 }

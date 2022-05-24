@@ -6,6 +6,8 @@
 //
 
 import Spring
+// После двухнедельного перерыва напорол косяков, забыв про сервисный слой.
+// С первых слов разбора Алексея взялся за голову и полетел исправлять, поэтому должно быть подозрительно чисто)
 
 class SpringViewController: UIViewController {
 
@@ -16,56 +18,28 @@ class SpringViewController: UIViewController {
         }
     }
 
+    private var randomAnimation = Animation.getAnimation()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        setAnimation(for: animationLabel, by: Animation.getAnimation())
-        showRandomAnimationParameters(for: animationLabel)
+        animationLabel.text = randomAnimation.description
     }
 
-/* Здесь обнаружил, что в методе animate() есть код, который через какое-то сбегающее замыкание ресетит все параметры анимации.
- Побороть это замыкание у меня не получилось, поэтому сделал такую ловушку через if для самого первого нажатия кнопки.
- */
     @IBAction func animationButtonTouchUp(_ sender: UIButton) {
-        if animationLabel.animation != "" {
-            animationLabel.animate()
-            setTitleForAnimationButton(sender)
-        }
+        animationLabel.text = randomAnimation.description
+        setAnimationParameters(for: animationLabel, by: randomAnimation)
 
-        setAnimation(
-            for: animationLabel,
-            by: Animation.getAnimation(),
-            by: sender.currentTitle
-        )
-
-        showRandomAnimationParameters(for: animationLabel)
         animationLabel.animate()
 
-        setTitleForAnimationButton(sender)
+        randomAnimation = Animation.getAnimation()
+        sender.setTitle(randomAnimation.animation, for: .normal)
     }
 
-    private func setAnimation(for element: Springable, by parameters: Animation, by name: String? = nil ) {
-        name != nil
-        ? (element.animation = name ?? "pop")
-        : (element.animation = parameters.animation)
-
-        element.curve = parameters.curve
-        element.force = parameters.force
-        element.delay = parameters.delay
-        element.duration = parameters.duration
-        }
-
-    private func showRandomAnimationParameters(for label: SpringLabel) {
-        label.text = """
-         Animation = \(label.animation)
-         Curve = \(label.curve)
-         Force = \(String(format: "%.2f", label.force))
-         Delay = \(String(format: "%.2f", label.delay))
-         Duration = \(String(format: "%.2f", label.duration))
-        """
-    }
-
-    private func setTitleForAnimationButton(_ sender: UIButton) {
-        sender.setTitle(Animation.getAnimation().animation, for: .normal)
+    private func setAnimationParameters(for element: Springable, by animation: Animation) {
+        element.animation = animation.animation
+        element.curve = animation.curve
+        element.force = CGFloat(animation.force)
+        element.delay = CGFloat(animation.delay)
+        element.duration = CGFloat(animation.duration)
     }
 }

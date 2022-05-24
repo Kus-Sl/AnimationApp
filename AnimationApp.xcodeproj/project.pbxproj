@@ -14,6 +14,7 @@
 		A805DB682839585900163F5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A805DB662839585900163F5C /* LaunchScreen.storyboard */; };
 		A8174315283A80240080F6D9 /* AnimationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8174314283A80240080F6D9 /* AnimationModel.swift */; };
 		A897CE11283CCEC100FD7AAA /* Extension + UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A897CE10283CCEC100FD7AAA /* Extension + UIView.swift */; };
+		A897CE15283CD90E00FD7AAA /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A897CE14283CD90E00FD7AAA /* DataManager.swift */; };
 		A8AE628F283A9863009C40D8 /* SpringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AE628E283A9863009C40D8 /* SpringViewController.swift */; };
 		A8AE6290283A9ACD009C40D8 /* Scene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8AE628C283A981E009C40D8 /* Scene.storyboard */; };
 		A8C4C4A2283C27B90012D672 /* CoreAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C4C4A1283C27B90012D672 /* CoreAnimationViewController.swift */; };
@@ -30,6 +31,7 @@
 		A805DB692839585900163F5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A8174314283A80240080F6D9 /* AnimationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationModel.swift; sourceTree = "<group>"; };
 		A897CE10283CCEC100FD7AAA /* Extension + UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIView.swift"; sourceTree = "<group>"; };
+		A897CE14283CD90E00FD7AAA /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		A8AE628C283A981E009C40D8 /* Scene.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scene.storyboard; sourceTree = "<group>"; };
 		A8AE628E283A9863009C40D8 /* SpringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringViewController.swift; sourceTree = "<group>"; };
 		A8C4C4A1283C27B90012D672 /* CoreAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreAnimationViewController.swift; path = AnimationApp/ViewControllers/CoreAnimationViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -70,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				A805DB7028395E0600163F5C /* ViewControllers */,
+				A897CE13283CD8ED00FD7AAA /* ServiceLayer */,
 				A8174313283A7FFF0080F6D9 /* Models */,
 				A805DB7128395E1D00163F5C /* StoryBoards */,
 				A897CE12283CCEE100FD7AAA /* Extensions */,
@@ -129,6 +132,14 @@
 				A897CE10283CCEC100FD7AAA /* Extension + UIView.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A897CE13283CD8ED00FD7AAA /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				A897CE14283CD90E00FD7AAA /* DataManager.swift */,
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 		B0A5B0392C19B22A4937DF7A /* Frameworks */ = {
@@ -266,6 +277,7 @@
 				A8174315283A80240080F6D9 /* AnimationModel.swift in Sources */,
 				A897CE11283CCEC100FD7AAA /* Extension + UIView.swift in Sources */,
 				A805DB5C2839585800163F5C /* AppDelegate.swift in Sources */,
+				A897CE15283CD90E00FD7AAA /* DataManager.swift in Sources */,
 				A805DB5E2839585800163F5C /* SceneDelegate.swift in Sources */,
 				A8C4C4A2283C27B90012D672 /* CoreAnimationViewController.swift in Sources */,
 				A8AE628F283A9863009C40D8 /* SpringViewController.swift in Sources */,
