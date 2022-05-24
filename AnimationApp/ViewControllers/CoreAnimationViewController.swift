@@ -18,5 +18,6 @@ class CoreAnimationViewController: UIViewController {
     }
 
     @IBAction func animationButtonTouchUp(_ sender: UIButton) {
+        animationLabel.getRandomCoreAnimation()
     }
 }
