@@ -6,9 +6,6 @@
 //
 
 import Spring
-// После двухнедельного перерыва напорол косяков, забыв про сервисный слой.
-// С первых слов разбора Алексея взялся за голову и полетел исправлять, поэтому должно быть подозрительно чисто)
-
 class SpringViewController: UIViewController {
 
     @IBOutlet weak var animationLabel: SpringLabel! {
